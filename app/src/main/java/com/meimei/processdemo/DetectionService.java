@@ -5,6 +5,13 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 
+import com.meimei.processdemo.Lockactivity.LockActivity;
+import com.meimei.processdemo.Lockactivity.LockActivity1;
+import com.meimei.processdemo.Lockactivity.LockActivity2;
+import com.meimei.processdemo.Lockactivity.LockActivity3;
+
+import java.util.Random;
+
 /**
  * Created by 梅梅 on 2016/8/30.
  */
@@ -42,25 +49,39 @@ public class DetectionService extends AccessibilityService{
             }else
             {
                 Log.i(TAG,"在后台");
-                Intent intent = new Intent(this,LockActivity.class);
+
+                int ran_num = new Random().nextInt(4);   //生成一个0-3的随机数,随机选择lockactivity
+                Intent intent = null;
+                switch (ran_num){
+                    case 0:
+                        intent = new Intent(this,LockActivity.class);
+                        break;
+                    case 1:
+                        intent = new Intent(this,LockActivity1.class);
+                        break;
+                    case 2:
+                        intent = new Intent(this,LockActivity2.class);
+                        break;
+                    case 3:
+                        intent = new Intent(this,LockActivity3.class);
+                        break;
+                }
+
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         }
-
     }
 
     @Override
     public void onInterrupt() {
         Log.i(TAG,"onInterrupt");
-
     }
 
     @Override
     protected void onServiceConnected() {
         super.onServiceConnected();
         Log.i(TAG,"onServiceConnected");
-
     }
 
     /**

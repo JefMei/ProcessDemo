@@ -35,9 +35,7 @@ public class AccessbilityUtil {
                 return services.toLowerCase().contains(context.getPackageName().toLowerCase());
             }
         }
-
         return false;
-
     }
 
     /**
@@ -53,5 +51,4 @@ public class AccessbilityUtil {
             // 执行辅助功能服务相关操作
         }
     }
-
 }

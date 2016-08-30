@@ -1,41 +1,33 @@
-package com.meimei.processdemo;
+package com.meimei.processdemo.Lockactivity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
+
+import com.meimei.processdemo.R;
 
 /**
  *  随便一个用于跳转的界面
  */
-public class LockActivity extends AppCompatActivity {
+public class LockActivity extends BaseLockActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lock);
-        Button button = (Button) findViewById(R.id.bt);
+        TextView textView = (TextView) findViewById(R.id.tv);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent MyIntent = new Intent(Intent.ACTION_MAIN);
                 MyIntent.addCategory(Intent.CATEGORY_HOME);
                 startActivity(MyIntent);
-
                 finish();
             }
         });
     }
 
-    @Override
-    public void onBackPressed() {
 
-        Intent MyIntent = new Intent(Intent.ACTION_MAIN);
-        MyIntent.addCategory(Intent.CATEGORY_HOME);
-        startActivity(MyIntent);
-
-        finish();
-    }
 }

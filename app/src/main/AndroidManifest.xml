@@ -28,7 +28,13 @@
                 android:resource="@xml/detection_service_config" />
         </service>
 
-        <activity android:name=".LockActivity"
+        <activity android:name=".Lockactivity.LockActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".Lockactivity.LockActivity1"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".Lockactivity.LockActivity2"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".Lockactivity.LockActivity3"
             android:launchMode="singleInstance"/>
     </application>
 

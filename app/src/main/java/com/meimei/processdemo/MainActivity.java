@@ -20,7 +20,6 @@ public class MainActivity extends Activity {
         //判断辅助功能有没有开
         AccessbilityUtil.anyMethod(this);
 
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

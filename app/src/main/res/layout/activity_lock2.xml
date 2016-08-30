@@ -7,8 +7,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/ic_lock_hint1"/>
-
+        android:src="@mipmap/ic_lock_hint3"/>
 
     <TextView
         android:id="@+id/tv"
@@ -20,4 +19,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"/>
+
 </RelativeLayout>
