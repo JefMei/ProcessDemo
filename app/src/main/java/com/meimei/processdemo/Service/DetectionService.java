@@ -1,4 +1,4 @@
-package com.meimei.processdemo;
+package com.meimei.processdemo.Service;
 
 import android.accessibilityservice.AccessibilityService;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import java.util.Random;
 
 /**
  * Created by 梅梅 on 2016/8/30.
+ * 利用辅助功能的监测服务，方法缺陷：需要每次手动开启权限
  */
 public class DetectionService extends AccessibilityService{
 
